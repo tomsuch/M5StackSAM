@@ -72,6 +72,7 @@ unsigned int M5SAM::getrgb(byte inred, byte ingrn, byte inblue){
 
 void M5SAM::drawAppMenu(String inmenuttl, String inbtnAttl, String inbtnBttl, String inbtnCttl){
   drawMenu(inmenuttl, inbtnAttl, inbtnBttl, inbtnCttl, menucolor, windowcolor, menutextcolor);
+  M5.Lcd.setTextColor(menutextcolor,windowcolor);
 }
 
 void M5SAM::setColorSchema(unsigned int inmenucolor, unsigned int inwindowcolor, unsigned int intextcolor){
