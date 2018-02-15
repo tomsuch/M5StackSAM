@@ -70,7 +70,8 @@ void appListDemo(){
 void appFacesGetString(){
   String tmpStr = "";
   MyMenu.drawAppMenu(F("FACES GET STRING"),F(""),F("ESC"),F(""));
-
+  MyMenu.windowClr();
+  M5.Lcd.drawCentreString("WRITE TEXT AND PRESS ENTER (OK)",M5.Lcd.width()/2,M5.Lcd.height()/2,2);
   while(M5.BtnB.wasPressed()){
     M5.update();
   }
