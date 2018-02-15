@@ -43,7 +43,7 @@ void setup() {
   MyMenu.addMenuItem(0,"APPLICATIONS","<","OK",">",1,dummy);
   MyMenu.addMenuItem(0,"SYSTEM","<","OK",">",2,dummy);
   MyMenu.addMenuItem(0,"CONFIGURATION","<","OK",">",3,dummy);
-  MyMenu.addMenuItem(0,"ABOUT","<","OK",">",-1,dummy);
+  MyMenu.addMenuItem(0,"ABOUT","<","OK",">",-1,appAbout);
 
   MyMenu.addMenuItem(1,"WiFi SCANNER","<","OK",">",-1,appWiFiScanner);
   MyMenu.addMenuItem(1,"I2C SCANNER","<","OK",">",-1,appIICScanner);

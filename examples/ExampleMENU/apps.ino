@@ -20,6 +20,23 @@ String getWiFiMac() {
 //  MyMenu.show();
 //}
 
+void appAbout(){
+  MyMenu.drawAppMenu(F("ABOUT"),F(""),F("ESC"),F(""));
+
+  while(M5.BtnB.wasPressed()){
+    M5.update();
+  }
+  MyMenu.windowClr();
+  M5.Lcd.drawCentreString(F("TomSuch@2018"),M5.Lcd.width()/2,(M5.Lcd.height()/2)-10,2);
+  M5.Lcd.drawCentreString(F("https://github.com/tomsuch/M5StackSAM"),M5.Lcd.width()/2,(M5.Lcd.height()/2)+10,2);   
+  while(!M5.BtnB.wasPressed()){
+    M5.update();
+  }
+
+  MyMenu.show();
+}
+
+
 void appListDemo(){
   MyMenu.drawAppMenu(F("LIST DEMO"),F("SELECT"),F("ESC"),F("LIST"));
 
