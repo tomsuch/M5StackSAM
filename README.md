@@ -8,7 +8,7 @@ M5STACK FACES SUPPORT:
 	keyboardGetString(); - return String entered by keyboard
 	EXAMPLE:
 		String tmpStr = "";
-		tmpStr = MyMenu.keyboardGetString();
+		tmpStr = MyMenu.keyboardGetString(); - write text and press ENTER (OK) on keyboard
 		
 
 LIST FUNCTIONS:
