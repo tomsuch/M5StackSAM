@@ -39,6 +39,7 @@ void setup() {
   //           IF SELECTOR = [0-7] then MyMenu.execute() switch menu items to SUBMENU_ID
   //    FUNCTION_NAME: name of function to run....
 
+  
   MyMenu.addMenuItem(0,"APPLICATIONS","<","OK",">",1,dummy);
   MyMenu.addMenuItem(0,"SYSTEM","<","OK",">",2,dummy);
   MyMenu.addMenuItem(0,"CONFIGURATION","<","OK",">",3,dummy);
@@ -47,6 +48,8 @@ void setup() {
   MyMenu.addMenuItem(1,"WiFi SCANNER","<","OK",">",-1,appWiFiScanner);
   MyMenu.addMenuItem(1,"I2C SCANNER","<","OK",">",-1,appIICScanner);
   MyMenu.addMenuItem(1,"STOPWATCH","<","OK",">",-1,appStopWatch);
+  MyMenu.addMenuItem(1,"FACES - GET STRING","<","OK",">",-1,appFacesGetString);
+  MyMenu.addMenuItem(1,"LIST DEMO","<","OK",">",-1,appListDemo);
   MyMenu.addMenuItem(1,"RETURN","<","OK",">",0,dummy);
 
   MyMenu.addMenuItem(2,"SYSTEM INFORMATIONS","<","OK",">",-1,appSysInfo);

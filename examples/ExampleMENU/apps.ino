@@ -6,6 +6,86 @@ String getWiFiMac() {
   return String(baseMacChr);
 }
 
+//void appTEMPLATE(){
+//  MyMenu.drawAppMenu(F("APP_TITTLE"),F("BTN_A_TITTLE"),F("BTN_B_TITTLE"),F("BTN_C_TITTLE"));
+//
+//  while(M5.BtnB.wasPressed()){
+//    M5.update();
+//  }
+//    
+//  while(!M5.BtnB.wasPressed()){
+//    M5.update();
+//  }
+//
+//  MyMenu.show();
+//}
+
+void appListDemo(){
+  MyMenu.drawAppMenu(F("LIST DEMO"),F("SELECT"),F("ESC"),F("LIST"));
+
+  while(M5.BtnB.wasPressed()){
+    M5.update();
+  }
+
+  MyMenu.clearList();
+  MyMenu.setListCaption("DEMO LIST");
+  MyMenu.addList("AHOOJ");  
+  MyMenu.addList("VOLE");  
+  MyMenu.addList("JAK");  
+  MyMenu.addList("SE");
+  MyMenu.addList("MAS");
+  MyMenu.addList("TY");
+  MyMenu.addList("VOLE");
+  MyMenu.addList("JEDEN");
+  MyMenu.addList("SKAREDEJ");
+  MyMenu.addList("PLESNIVEJ");
+  MyMenu.addList("JAK");  
+  MyMenu.addList("SE");
+  MyMenu.addList("MAS");
+  MyMenu.addList("TY");
+  MyMenu.addList("VOLE");
+  MyMenu.addList("JEDEN");
+  MyMenu.addList("SKAREDEJ");
+  MyMenu.addList("PLESNIVEJ");
+  MyMenu.addList("SKAREDEJ");
+  MyMenu.addList("PLESNIVEJ");
+  MyMenu.showList();  
+
+  while(!M5.BtnB.wasPressed()){
+    if(M5.BtnC.wasPressed()){
+      MyMenu.nextList();
+    }
+    if(M5.BtnA.wasPressed()){
+      MyMenu.windowClr();
+      M5.Lcd.drawCentreString("ID: "+String(MyMenu.getListID()),M5.Lcd.width()/2,(M5.Lcd.height()/2)-10,2);
+      M5.Lcd.drawCentreString("TEXT: "+MyMenu.getListString(),M5.Lcd.width()/2,(M5.Lcd.height()/2)+10,2);
+    }
+    M5.update();
+  }
+  
+  MyMenu.show();
+}
+
+
+void appFacesGetString(){
+  String tmpStr = "";
+  MyMenu.drawAppMenu(F("FACES GET STRING"),F(""),F("ESC"),F(""));
+
+  while(M5.BtnB.wasPressed()){
+    M5.update();
+  }
+
+  tmpStr = MyMenu.keyboardGetString();
+  MyMenu.windowClr();
+  M5.Lcd.drawCentreString(tmpStr,M5.Lcd.width()/2,M5.Lcd.height()/2,2);
+
+  while(!M5.BtnB.wasPressed()){
+    M5.update();
+  }
+  
+  MyMenu.show();
+}
+
 void appSysInfo(){
   MyMenu.drawAppMenu(F("M5 SYSTEM INFO"),F(""),F("ESC"),F(""));
 
