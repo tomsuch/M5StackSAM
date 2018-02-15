@@ -2,6 +2,25 @@
 
 A simple to use library for creating an application menu on the M5Stack platform.
 
+M5STACK FACES SUPPORT:
+
+	SUPPORT for M5STACK-FACES QWERTY keyboart
+	keyboardGetString(); - return String entered by keyboard
+	EXAMPLE:
+		String tmpStr = "";
+		tmpStr = MyMenu.keyboardGetString();
+		
+
+LIST FUNCTIONS:
+	
+	clearList(); - cler list buffer and settings
+	setListCaption("LIST - CAPTION"); - set list caption
+	addList("ITEM TEXT"); - add item to list
+	showList(); - show created list
+	nextList(); - select next item
+	getListID() - get ID of selected item as byte
+	getListString() - get ITEM TEXT of selected item as String
+
 
 CHANGING COLOR SCHEMA:
 
