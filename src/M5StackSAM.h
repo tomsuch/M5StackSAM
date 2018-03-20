@@ -39,6 +39,7 @@ class M5SAM {
     void showList();
     void clearList();
     byte getListID();
+    void setListID(byte idx);
     String getListString();
     void nextList();
     void addList(String inLabel);
