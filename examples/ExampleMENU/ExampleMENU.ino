@@ -18,7 +18,7 @@ void setup() {
 
   if (!EEPROM.begin(EEPROM_SIZE))
   {
-    Serial.println("failed to initialise EEPROM");
+    Serial.println("Failed to initialise EEPROM.");
   }else{
     M5.lcd.setBrightness(byte(EEPROM.read(0)));
   }
@@ -52,7 +52,7 @@ void setup() {
   MyMenu.addMenuItem(1,"LIST DEMO","<","OK",">",-1,appListDemo);
   MyMenu.addMenuItem(1,"RETURN","<","OK",">",0,dummy);
 
-  MyMenu.addMenuItem(2,"SYSTEM INFORMATIONS","<","OK",">",-1,appSysInfo);
+  MyMenu.addMenuItem(2,"SYSTEM INFORMATION","<","OK",">",-1,appSysInfo);
   MyMenu.addMenuItem(2,"SLEEP/CHARGING","<","OK",">",-1,appSleep);
   MyMenu.addMenuItem(2,"RETURN","<","OK",">",0,dummy);
 
