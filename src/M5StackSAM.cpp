@@ -61,6 +61,7 @@ void M5SAM::setListID(byte idx) {
   if(idx< list_page * M5SAM_LIST_PAGE_LABELS + list_lines){
     list_idx = idx;
   }
+  list_page = list_idx / M5SAM_LIST_PAGE_LABELS;
 }
 
 String M5SAM::getListString(){
